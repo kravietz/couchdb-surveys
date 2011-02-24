@@ -58,6 +58,14 @@ This pushes to the `default` as specified. To push to the `public` you'd run:
 
 Of course you can continue to add more deployment targets as you see fit, and give them whatever names you like.
 
+h1. Eclipse
+
+This project is being pushed to GitHub from Eclipse so you should be able to easily import it into Eclipse as well.
+
+h1. CouchApp
+
+This application was created based on CouchApp template.
+
 CouchApps are web applications which can be served directly from "CouchDB":http://couchdb.apache.org. This gives them the nice property of replicating just like any other data stored in CouchDB. They are also simple to write as they can use the built-in jQuery libraries and plugins that ship with CouchDB.
 
 "More info about CouchApps here":http://couchapp.org
