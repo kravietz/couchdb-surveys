@@ -1,0 +1,93 @@
+h1. Survey Template
+
+A survey is single CouchDB document. Order of questions is defined by "order" attribute. Questions are attributes referenced from "order".
+
+<pre><code>
+{
+   "_id": "5baf93a6d0e7fe88ba1540506500031c",
+   "_rev": "1-ac40d064a8441240c3acbad17be44350",
+   "type": "survey",
+   "title": "Animals survey",
+   "order": [
+       "question1",
+       "question2",
+       "question3"
+   ],
+   "question1": {
+       "ask" : "What animal do you like most?",
+       "type" : "radio",
+       "answers": [
+           "Cat",
+           "Horse",
+           "Donkey",
+           "Dog"
+       ]
+   },
+   "question2": {
+       "ask" : "What colors do you like?",
+       "type" : "checkbox",
+       "answers" : [
+           "Red",
+           "Brown",
+           "Black",
+           "Green"
+       ]
+   },
+   "question3": {
+       "ask": "Please enter your name",
+       "type": "text",
+       "answers" : [ "" ]
+   }
+}
+</code></pre>
+
+Notes:
+
+# "type" field is just as in HTML5 input type= attribute
+# "answers" is required even in "text" type questions to display empty text box
+
+h1. Survey Response Template
+
+Answer is also passed as a single document. Each answer is marked by the person who returned it.
+
+<pre><code>
+{
+	"_id" : "091203981092",
+	
+	"type" : "survey-response",
+	"response_to" : "182938172983",
+	"created_at" : "2011-02-24T16:56:00.917Z",
+	"respondent" : "Mary Smith",
+	
+	"question1":"Horse",
+	"question2":["Brown","Black"],
+	"question3":"dddd",
+	
+}
+</code></pre>
+
+h1. Implementation
+
+h2. Completing survey
+
+The following operations need to happen to complete survey:
+
+# Display survey list - *list* ??all-surveys?? with links to *show* ??show-survey??
+# Show survey - build response form, looping on ??questions??, then looping on ??answers??
+# On submit
+## JavaScript to build a response block
+## Respondent identity -> take from user context
+
+h2. Adding survey
+
+h2. Views
+
+* ??view-all-surveys?? - return all surveys in database (doc.type=="survey")
+
+h2. Lists
+
+* ??list-all-surveys??
+
+h1. Shows
+
+* ??show-survey??

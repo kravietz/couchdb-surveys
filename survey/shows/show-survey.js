@@ -10,6 +10,7 @@ function(doc, req) {
 	      site_title : doc.title,
 	      abs : abs,
 	      db : db,
+	      response_to : doc._id,
 	      questions : []
 		};
 		  for(var i=0; i<doc.order.length; i++) {

@@ -2,7 +2,6 @@
 	
 	<div id="survey">
 	<form action="#" encoding="utf-8">
-	  <input type="hidden" name="type" value="survey_response" >
 	  {{#questions}}
 	  <fieldset>
 	  	<p><legend>Question: {{ask}}</legend></p>
@@ -12,7 +11,9 @@
 	  </fieldset>
 	  {{/questions}} 
 	   
-	  <div id="submit"></div><input type="submit"></div>
+	  <input type="hidden" name="type" value="survey_response" >
+	  <input type="hidden" name="response_to" value="{{response_to}}" > 
+	  </div><input type="submit">
 	</form>
 	</div>
 
