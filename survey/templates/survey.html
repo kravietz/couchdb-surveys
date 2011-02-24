@@ -1,10 +1,12 @@
 {{>header}}
+
+<section id="survey" class="body">
 	
 	<div id="survey">
 	<form action="#" encoding="utf-8">
 	  {{#questions}}
 	  <fieldset>
-	  	<p><legend>Question: {{ask}}</legend></p>
+	  	<p><legend>{{ask}}</legend></p>
 	  	{{#answers}}
 	  		<p><label><input type="{{type}}" name="{{q}}" value="{{answer}}" >{{answer}}</label></p>
 	  	{{/answers}}
@@ -15,7 +17,7 @@
 	  <input type="hidden" name="response_to" value="{{response_to}}" > 
 	  </div><input type="submit">
 	</form>
-	</div>
+</section>
 
 </body>
   
