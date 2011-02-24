@@ -1,0 +1,30 @@
+{{>header}}
+	
+	<div id="survey">
+	<form action="#" encoding="utf-8">
+	  <input type="hidden" name="type" value="survey_response" >
+	  {{#questions}}
+	  <fieldset>
+	  	<p><legend>Question: {{ask}}</legend></p>
+	  	{{#answers}}
+	  		<p><label><input type="{{type}}" name="{{q}}" value="{{answer}}" >{{answer}}</label></p>
+	  	{{/answers}}
+	  </fieldset>
+	  {{/questions}} 
+	   
+	  <div id="submit"></div><input type="submit"></div>
+	</form>
+	</div>
+
+</body>
+  
+{{>scripts}}
+
+<script type="text/javascript" charset="utf-8">
+    $.couch.app(function(app) {
+      $("#account").evently("account", app);
+      $("#survey").evently("survey", app);
+    });
+</script>
+
+</html>

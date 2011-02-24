@@ -1,0 +1,17 @@
+{{>header}}
+	<ul>
+	  {{#surveys}}
+	    <li><a href="../../_show/show-survey/{{id}}">{{title}}</a></li>
+	  {{/surveys}}  
+	</ul>
+  </body>
+  
+  {{>scripts}}
+  	
+	<script type="text/javascript" charset="utf-8">
+    $.couch.app(function(app) {
+      $("#account").evently("account", app);
+    });
+  	</script>
+  
+</html>
