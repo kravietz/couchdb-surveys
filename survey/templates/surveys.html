@@ -1,10 +1,19 @@
 {{>header}}
 
+<aside id="featured" class="body">
+    <article>
+    <h2>{{page_title}}</h2>
+    <p>Please select one of the available surveys to complete. You don't need to be logged in to take it.
+    </article>
+</aside>
+
 <section id="content" class="body">
 
 	<ul>
 	  {{#surveys}}
 	    <li><a href="{{abs}}/_show/show-survey/{{id}}">{{title}}</a>
+	    {{! this is implemented as list as we are returning a list of responses, not single show }}
+	    &mdash; <a href="{{abs}}/_list/responses-to/{{id}}">Responses</a>
 	  {{/surveys}}  
 	</ul>
 </section>	
