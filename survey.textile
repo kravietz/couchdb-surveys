@@ -54,7 +54,7 @@ Answer is also passed as a single document. Each answer is marked by the person 
 {
 	"_id" : "091203981092",
 	
-	"type" : "survey-response",
+	"type" : "survey_response",
 	"response_to" : "182938172983",
 	"created_at" : "2011-02-24T16:56:00.917Z",
 	"respondent" : "Mary Smith",
