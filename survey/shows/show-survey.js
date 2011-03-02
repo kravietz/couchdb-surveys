@@ -4,7 +4,8 @@ function(doc, req) {
 		var Mustache = require("vendor/couchapp/lib/mustache");
 		var Path = require("vendor/couchapp/lib/path").init(req);
 		var abs = Path.asset();
-		var survey_list = Path.list('list-all-surveys', 'view-all-surveys');
+		var survey_list = Path.list('surveys', 'all-surveys');
+		var survey_results = Path.list('results', 'all-results');
 		var db = req.path[0];
 		var data = {
 	      page_title : doc.title,
@@ -12,6 +13,7 @@ function(doc, req) {
 	      abs : abs,
 	      db : db,
 	      survey_list : survey_list,
+	      survey_results : survey_results,
 	      response_to : doc._id,
 	      questions : []
 		};
