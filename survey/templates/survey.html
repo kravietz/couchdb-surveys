@@ -1,8 +1,12 @@
 {{>header}}
 
-<section id="survey" class="body">
+<aside id="featured" class="body">
+    <article><h2>{{page_title}}</h2></article>
+</aside>
+
+<section id="content" class="body">
 	
-	<div id="survey">
+	<div id="survey"> {{! required by evently }}
 	<form action="#" encoding="utf-8">
 	  {{#questions}}
 	  <fieldset>
@@ -13,8 +17,8 @@
 	  </fieldset>
 	  {{/questions}} 
 	   
-	  <input type="hidden" name="type" value="survey_response" >
-	  <input type="hidden" name="response_to" value="{{response_to}}" > 
+	  <input type="hidden" name="response_to" value="{{response_to}}" >
+	  <input type="hidden" name="type" value="survey_response" > 
 	  </div><input type="submit">
 	</form>
 </section>
