@@ -13,7 +13,7 @@
 	  {{#surveys}}
 	    <li><a href="{{abs}}/_show/show-survey/{{id}}">{{title}}</a>
 	    {{! this is implemented as list as we are returning a list of responses, not single show }}
-	    &mdash; <a href="{{abs}}/_list/responses-to/{{id}}">Responses</a>
+	    &mdash; <a href="{{abs}}/_list/responses/q-and-resp?startkey={{start}}&stopkey={{stop}}">Responses</a>
 	  {{/surveys}}  
 	</ul>
 </section>	
