@@ -1,0 +1,28 @@
+{{>header}}
+
+<aside id="featured" class="body">
+    <article><h2>{{page_title}}</h2></article>
+</aside>
+
+<section id="content" class="body">
+
+{{#questions}}
+	<p><legend>{{q}}</legend></p>
+	{{#a}}
+	<p><label></label>{{answer}}</label> &mdash; {{count}}</p>
+	{{/a}}
+{{/questions}}
+
+</section>
+
+</body>
+  
+{{>scripts}}
+
+<script type="text/javascript" charset="utf-8">
+    $.couch.app(function(app) {
+      $("#account").evently("account", app);
+    });
+</script>
+
+</html>
