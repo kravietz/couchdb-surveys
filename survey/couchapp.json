@@ -1,1 +1,5 @@
-{"description": "Application inventory survey database", "name": "Surveys"}
+{
+	"description": "Application inventory survey database", 
+	"name": "Surveys",
+	"index" : "_list/surveys/all-surveys"
+}
