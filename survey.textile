@@ -59,9 +59,9 @@ Answer is also passed as a single document. Each answer is marked by the person 
 	"created_at" : "2011-02-24T16:56:00.917Z",
 	"respondent" : "Mary Smith",
 	
-	"question1":"Horse",
-	"question2":["Brown","Black"],
-	"question3":"dddd",
+	"question1" : "Horse",
+	"question2" : ["Brown","Black"],
+	"question3" : "dddd",
 	
 }
 </code></pre>
