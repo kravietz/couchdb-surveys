@@ -18,9 +18,12 @@ function(head, req) {
     };
     provides("html", function() {
     while (row = getRow()) {
+      id = row.value._id;
       data.surveys.push({
         title : row.value.title,
-        id : row.value._id
+        id : id,
+        start : escape(JSON.stringify([id,0])), 
+        stop : escape(JSON.stringify([id,2]))
       }); //push
     }; //while row
     return Mustache.to_html(ddoc.templates.surveys, data, ddoc.templates.partials);
