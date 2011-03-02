@@ -22,8 +22,9 @@ function(head, req) {
       data.surveys.push({
         title : row.value.title,
         id : id,
-        start : escape(JSON.stringify([id,0])), 
-        stop : escape(JSON.stringify([id,2]))
+        start : escape(JSON.stringify([id])), 
+        stop : escape(JSON.stringify([id,"x"]))
+        // startkey=["5baf93a6d0e7fe88ba1540506500031c"]&endkey=["5baf93a6d0e7fe88ba1540506500031c","x"]
       }); //push
     }; //while row
     return Mustache.to_html(ddoc.templates.surveys, data, ddoc.templates.partials);
