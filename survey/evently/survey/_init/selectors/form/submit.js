@@ -2,7 +2,6 @@ function() {
   var form = $(this);
   var fdoc = form.serializeObject();
   fdoc.created_at = new Date();
-  console.log(fdoc);
   fdoc.profile = $$("#profile").profile;
   $$(this).app.db.saveDoc(fdoc, {
     success : function() {
