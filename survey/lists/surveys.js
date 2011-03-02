@@ -1,7 +1,7 @@
 function(head, req) {
 	// Display a list of all surveys with link to each survey and its responses
 	// Template: templates/surveys
-	// View: surveys/all-surveys
+	// View: all-surveys
 	var row, ddoc = this;
     var Mustache = require("vendor/couchapp/lib/mustache");
     var Path = require("vendor/couchapp/lib/path").init(req);
