@@ -58,6 +58,16 @@ This pushes to the `default` as specified. To push to the `public` you'd run:
 
 Of course you can continue to add more deployment targets as you see fit, and give them whatever names you like.
 
+h1. Opening home page
+
+HTML home page:
+
+http://127.0.0.1:5984/survey/_design/survey/index.html
+
+Dynamically generated list of surveys:
+
+http://127.0.0.1:5984/survey/_design/survey/_list/surveys/all-surveys
+
 h1. Eclipse
 
 This project is being pushed to GitHub from Eclipse so you should be able to easily import it into Eclipse as well.
