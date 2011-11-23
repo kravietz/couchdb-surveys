@@ -62,11 +62,11 @@ h1. Opening home page
 
 HTML home page:
 
-http://127.0.0.1:5984/survey/_design/survey/index.html
+"http://127.0.0.1:5984/survey/_design/survey/index.html":http://127.0.0.1:5984/survey/_design/survey/index.html
 
 Dynamically generated list of surveys:
 
-http://127.0.0.1:5984/survey/__design/survey/_list/surveys/all-surveys
+"http://127.0.0.1:5984/survey/_design/survey/_list/surveys/all-surveys":http://127.0.0.1:5984/survey/_design/survey/index.html
 
 h1. Eclipse
 
